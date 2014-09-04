@@ -19,6 +19,8 @@
 		1D6B50DE19B8AFA9003C2699 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6B50C619B8AFA9003C2699 /* UIKit.framework */; };
 		1D6B50E619B8AFA9003C2699 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1D6B50E419B8AFA9003C2699 /* InfoPlist.strings */; };
 		1D6B50E819B8AFA9003C2699 /* BarcodeScannerTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B50E719B8AFA9003C2699 /* BarcodeScannerTestTests.m */; };
+		1D6B50F319B8AFB5003C2699 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6B50F219B8AFB4003C2699 /* RootViewController.m */; };
+		1D6B50F519B8B007003C2699 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D6B50F419B8B007003C2699 /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,9 @@
 		1D6B50E319B8AFA9003C2699 /* BarcodeScannerTestTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BarcodeScannerTestTests-Info.plist"; sourceTree = "<group>"; };
 		1D6B50E519B8AFA9003C2699 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1D6B50E719B8AFA9003C2699 /* BarcodeScannerTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BarcodeScannerTestTests.m; sourceTree = "<group>"; };
+		1D6B50F119B8AFB4003C2699 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		1D6B50F219B8AFB4003C2699 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		1D6B50F419B8B007003C2699 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D6B50F519B8B007003C2699 /* AVFoundation.framework in Frameworks */,
 				1D6B50C519B8AFA9003C2699 /* CoreGraphics.framework in Frameworks */,
 				1D6B50C719B8AFA9003C2699 /* UIKit.framework in Frameworks */,
 				1D6B50C319B8AFA9003C2699 /* Foundation.framework in Frameworks */,
@@ -96,6 +102,7 @@
 		1D6B50C119B8AFA9003C2699 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1D6B50F419B8B007003C2699 /* AVFoundation.framework */,
 				1D6B50C219B8AFA9003C2699 /* Foundation.framework */,
 				1D6B50C419B8AFA9003C2699 /* CoreGraphics.framework */,
 				1D6B50C619B8AFA9003C2699 /* UIKit.framework */,
@@ -109,6 +116,8 @@
 			children = (
 				1D6B50D119B8AFA9003C2699 /* AppDelegate.h */,
 				1D6B50D219B8AFA9003C2699 /* AppDelegate.m */,
+				1D6B50F119B8AFB4003C2699 /* RootViewController.h */,
+				1D6B50F219B8AFB4003C2699 /* RootViewController.m */,
 				1D6B50D419B8AFA9003C2699 /* Images.xcassets */,
 				1D6B50C919B8AFA9003C2699 /* Supporting Files */,
 			);
@@ -241,6 +250,7 @@
 			files = (
 				1D6B50D319B8AFA9003C2699 /* AppDelegate.m in Sources */,
 				1D6B50CF19B8AFA9003C2699 /* main.m in Sources */,
+				1D6B50F319B8AFB5003C2699 /* RootViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -359,10 +369,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: William Chang (NX2VTUWUY7)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: William Chang (NX2VTUWUY7)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BarcodeScannerTest/BarcodeScannerTest-Prefix.pch";
 				INFOPLIST_FILE = "BarcodeScannerTest/BarcodeScannerTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "A32D2CA3-74F8-4208-B77D-AA63056AC0B8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -375,7 +389,9 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "BarcodeScannerTest/BarcodeScannerTest-Prefix.pch";
 				INFOPLIST_FILE = "BarcodeScannerTest/BarcodeScannerTest-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "A32D2CA3-74F8-4208-B77D-AA63056AC0B8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
